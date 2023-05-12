@@ -1,0 +1,35 @@
+
+# db config
+spring:
+  datasource:
+      driver-class-name: org.postgresql.Driver
+      url: ${JDBC_URL:jdbc:postgresql://localhost:5432/academy_amey}
+      username: ${JDBC_USER:postgres}
+      password: ${JDBC_PASSWORD:Kartik@#2354}
+
+# file config
+  servlet:
+    multipart:
+        max-request-size: ${MAX_REQ_SIZE:10GB}
+        max-file-size: ${MAX_FILE_SIZE:10GB}
+        
+        
+server:
+  servlet:
+    contextPath: /api/v1
+    
+    
+    
+file:
+    upload:
+        location: ${FILE_UPLOAD_LOCATION:D:\\temp}
+        imageFormats:
+           - jpg
+           - jpeg
+           - png
+           - gif
+        videoFormats:
+           - avi
+           - mp4
+        documentFormats:
+           - pdf
