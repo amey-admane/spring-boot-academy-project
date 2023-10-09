@@ -26,6 +26,10 @@ import com.acrnome.academy_amey.entity.MasterTools;
 import com.acrnome.academy_amey.exceptions.MasterToolsException;
 import com.acrnome.academy_amey.services.MasterToolsService;
 
+/*
+ * Author :- Amey Admane
+ * File created with Custom SQL Query Repository
+ */
 
 
 
@@ -36,13 +40,16 @@ public class MasterToolsController {
 	@Autowired
 	private MasterToolsService masterToolsService;
 
-//	public String getUsername() {
-//		SecurityContext context = SecurityContextHolder.getContext();
-//		Authentication authentication = context.getAuthentication();
-//
-//		return authentication.getName();
-//
-//	}
+/*
+	public String getUsername() {
+		SecurityContext context = SecurityContextHolder.getContext();
+		Authentication authentication = context.getAuthentication();
+
+		return authentication.getName();
+
+	}
+*/
+	
 
 	@PostMapping(value = "/masterTools", consumes = { "multipart/form-data" })
 	public ResponseEntity<ToolsMasterDataResponseDTO> uploadExcelDataForTools(
