@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
+// DTO for Employee API responses
 @Setter
 @Getter
 @AllArgsConstructor
@@ -19,8 +19,13 @@ import lombok.ToString;
 @ToString
 public class EmployeeResponseDTO {
 	
+	// List of employees for bulk responses
 	private List<Employee> dataList; 
+	
+	// Single employee for individual responses
 	private Employee data;
+	
+	// Additional response metadata
 	private Map<String,String> metaData;
 	
 }

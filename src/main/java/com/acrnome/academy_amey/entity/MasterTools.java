@@ -6,12 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+// MasterTools entity for tools data
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 public class MasterTools {
+	
 	private String itemId;
 	private String description;
 	private String globalDescription;

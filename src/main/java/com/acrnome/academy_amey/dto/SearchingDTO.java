@@ -8,8 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
-
+// DTO for search request payloads
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,6 +16,9 @@ import lombok.ToString;
 @ToString
 public class SearchingDTO {
 
+	// Column names to search within
 	private List<String> columnsToSearch;
+	
+	// Term to search for
 	private String searchTerm;
 }

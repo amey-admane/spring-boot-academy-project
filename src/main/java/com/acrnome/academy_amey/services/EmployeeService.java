@@ -11,23 +11,27 @@ import com.acrnome.academy_amey.repository.EmployeeRepository;
 @Service
 public class EmployeeService {
 
-	
+	// Repository for database operations
 	@Autowired
-	private EmployeeRepository  employeeRepository;
+	private EmployeeRepository employeeRepository;
 	
+	// Get all employees
 	public List<Employee> getAllEmployeeData() {
 		return employeeRepository.findAll();
 	}
 	
+	// Get employee by ID
 	public Employee getEmployeeById(long employeeId) {
-		var datareturned = employeeRepository.findById(employeeId);
-		 if(datareturned.isPresent()) {
-			 return datareturned.get();
-		 }
-		return null; 
+		var dataReturned = employeeRepository.findById(employeeId);
 		
+		if(dataReturned.isPresent()) {
+			return dataReturned.get();
+		}
+		
+		return null; 
 	}
 	
+	// Save or update employee
 	public void saveEmployeeData(Employee employeeData) {
 		employeeRepository.save(employeeData);
 	}
