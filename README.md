@@ -46,31 +46,7 @@ Tables created via Flyway migrations:
 - `Employeeentity` - Employee data
 - `toolsmain` - Tools master data  
 - `toolsrefrence` - Tools reference data
-├── entity/                             # JPA Entities
-│   ├── Employee.java                   # Employee entity
-│   └── MasterTools.java                # Master tools entity (POJO)
-├── exceptions/                         # Exception handling
-│   ├── ErrorResponse.java              # Generic error response
-│   ├── GlobalExceptionHandler.java     # Global exception handler
-│   ├── MasterToolsErrorResponse.java   # Tools-specific error response
-│   └── MasterToolsException.java       # Custom tools exception
-├── helper/                             # Utility helpers
-│   ├── CountCheckToolHelper.java       # Count check utilities
-│   └── ExcelFileHelper.java            # Excel processing utilities
-├── internal/                           # Internal tools
-│   └── CountCheckTool.java             # Count checking tool
-├── reader/                             # File readers
-│   ├── AbstractReader.java             # Abstract file reader
-│   └── FileReader.java                 # File reading implementation
-├── repository/                         # Data access layer
-│   ├── EmployeeRepository.java         # Employee JPA repository
-│   └── MasterToolsRepository.java      # Master tools custom repository
-├── services/                           # Business logic layer
-│   ├── EmployeeService.java            # Employee business logic
-│   └── MasterToolsService.java         # Master tools business logic
-└── utils/                              # Utility classes
-    └── ByteConversion.java             # Byte conversion utilities
-```
+
 
 ## 🛠️ Technology Stack
 
@@ -86,14 +62,6 @@ Tables created via Flyway migrations:
 - **Build Tool**: Maven
 - **Testing**: Spring Boot Test
 
-## 📊 Database Schema
-
-The application uses two main database tables:
-- **Employeeentity**: Stores employee information (ID, email, name, address)
-- **toolsmain**: Main tools information table
-- **toolsrefrence**: Tools reference data table
-
-Database migrations are managed through Flyway with SQL scripts in `src/main/resources/db/migration/`.
 
 ## 🌐 API Endpoints
 
@@ -155,23 +123,3 @@ java -jar target/acadmey_amey-0.0.1-SNAPSHOT.jar
 - Custom error responses
 - Detailed error messages with error codes
 - HTTP status code mapping
-
-## 📖 Learning Objectives
-This project demonstrates:
-- Spring Boot application structure and configuration
-- REST API design and implementation
-- JPA and custom repository patterns
-- File upload and processing
-- Database migrations with Flyway
-- Exception handling strategies
-- DTO pattern implementation
-- Service layer architecture
-- Cross-cutting concerns (CORS, validation)
-
-## 🔄 Future Enhancements
-- Add authentication and authorization
-- Implement caching mechanisms
-- Add comprehensive unit and integration tests
-- Implement API documentation with Swagger
-- Add monitoring and logging capabilities
-- Containerization with Docker
